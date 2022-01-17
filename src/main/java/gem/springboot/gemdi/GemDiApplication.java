@@ -1,9 +1,6 @@
 package gem.springboot.gemdi;
 
-import gem.springboot.gemdi.controller.ConstructorInjectedController;
-import gem.springboot.gemdi.controller.MyController;
-import gem.springboot.gemdi.controller.PropertyInjectedController;
-import gem.springboot.gemdi.controller.SetterInjectedController;
+import gem.springboot.gemdi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,8 +12,16 @@ public class GemDiApplication {
 	{
 		ApplicationContext applicationContext = SpringApplication.run(GemDiApplication.class, args);
 		MyController myController = (MyController) applicationContext.getBean("myController");
-		String strGreet = myController.hello();
-		System.out.println(strGreet);
+
+		PetController petController = applicationContext.getBean("petController" , PetController.class);
+		System.out.println("-----The Best Pet is-----");
+		System.out.println(petController.whichPetIsTheBest());
+
+		InitializeController initializeController = (InitializeController) applicationContext.getBean("initializeController");
+		System.out.println(initializeController.hello());
+
+		System.out.println("-------Primary Bean--------");
+		System.out.println(myController.hello());
 
 		System.out.println(" ");
 
