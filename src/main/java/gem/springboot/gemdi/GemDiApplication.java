@@ -1,10 +1,15 @@
 package gem.springboot.gemdi;
 
 import gem.springboot.gemdi.controller.*;
+import gem.springboot.gemdi.services.PrototypeBean;
+import gem.springboot.gemdi.services.SingletonBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+
+//@ComponentScan(basePackages = {"gem.springboot.gemdi","com.springbootpets"})
 @SpringBootApplication
 public class GemDiApplication {
 
@@ -41,6 +46,20 @@ public class GemDiApplication {
 		System.out.println("-------Constructor-------");
 		ConstructorInjectedController constructorInjectedController =(ConstructorInjectedController) applicationContext.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("-------BEAN SCOPES--------");
+
+		SingletonBean singletonBean = applicationContext.getBean(SingletonBean.class);
+		System.out.println(singletonBean.getMyScope());
+		SingletonBean singletonBean2 = applicationContext.getBean(SingletonBean.class);
+		System.out.println(singletonBean2.getMyScope());
+
+		PrototypeBean prototypeBean = applicationContext.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean.getMyScope());
+
+		PrototypeBean prototypeBean2 = applicationContext.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean2.getMyScope());
+
 	}
 
 }

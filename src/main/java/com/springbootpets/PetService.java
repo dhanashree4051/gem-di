@@ -1,4 +1,4 @@
-package gem.springboot.gemdi.services;
+package com.springbootpets;
 
 public interface PetService
 {

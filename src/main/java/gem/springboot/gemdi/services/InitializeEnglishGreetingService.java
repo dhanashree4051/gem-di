@@ -1,12 +1,14 @@
 package gem.springboot.gemdi.services;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
+import gem.springboot.gemdi.repositories.EnglishGreetingRepository;
 
-@Profile("English")
-@Service("initializeService")
 public class InitializeEnglishGreetingService implements GreetingService
 {
+private final EnglishGreetingRepository englishGreetingRepository;
+
+    public InitializeEnglishGreetingService(EnglishGreetingRepository englishGreetingRepository) {
+        this.englishGreetingRepository = englishGreetingRepository;
+    }
 
     @Override
     public String sayGreeting() {

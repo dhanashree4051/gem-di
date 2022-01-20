@@ -1,8 +1,6 @@
 package gem.springboot.gemdi.services;
 
-import org.springframework.stereotype.Service;
 
-@Service
 public class SetterInjectedGreetingService implements GreetingService
 {
 

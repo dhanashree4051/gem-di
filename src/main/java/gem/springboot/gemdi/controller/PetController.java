@@ -1,6 +1,6 @@
 package gem.springboot.gemdi.controller;
 
-import gem.springboot.gemdi.services.PetService;
+import com.springbootpets.PetService;
 import org.springframework.stereotype.Controller;
 
 @Controller

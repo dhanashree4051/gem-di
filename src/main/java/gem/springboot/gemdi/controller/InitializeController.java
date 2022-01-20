@@ -9,7 +9,7 @@ public class InitializeController
 {
     private final GreetingService greetingService;
 
-    public InitializeController(@Qualifier("initializeService") GreetingService greetingService) {
+    public InitializeController(@Qualifier("initializeServiceEnglish") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
     public String hello()
