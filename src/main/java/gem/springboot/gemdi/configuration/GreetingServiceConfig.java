@@ -13,7 +13,8 @@ import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Service;
 
 //@Service
-@PropertySource("classpath:datasource.properties")
+//remove from datasourse.properties to application.properties
+//@PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:gem-config.xml")
 @Configuration
 public class GreetingServiceConfig
