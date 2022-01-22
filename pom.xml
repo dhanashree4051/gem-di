@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -15,12 +14,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>gem.spring-boot-pet-clinic</groupId>
 	<artifactId>gem-pet-clinic-project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>gem-pet-clinic-project</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -38,16 +37,18 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<goals>install</goals>
-				</configuration>
+						<configuration>
+						<goals>
+							install
+						</goals>
+						</configuration>
 			</plugin>
 
 		</plugins>
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/dhanashree4051/gem-di.git</developerConnection>
-	</scm>
+		<developerConnection>scm:https://github.com/dhanashree4051/gem-pet-clinic.git</developerConnection>
+  </scm>
 
 </project>
