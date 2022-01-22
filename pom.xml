@@ -19,7 +19,7 @@
 
 	<groupId>gem.spring-boot-pet-clinic</groupId>
 	<artifactId>gem-pet-clinic-project</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>gem-pet-clinic-project</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -48,7 +48,8 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:https://github.com/dhanashree4051/gem-pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/dhanashree4051/gem-di.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
